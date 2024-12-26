@@ -1,0 +1,437 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block body %}
+
+<style>
+    #line_block {
+            width:110px;
+            height:50px;
+            background:#f1f1f1;
+            float:left;
+            margin: 0 15px 15px 0;
+            text-align:center;
+            padding: 10px;
+            }
+    .banner_up{
+        border-radius: 10px;
+        border: 5px #ccc solid;
+        box-shadow: 0 0 10px #444;
+        font-size: small;
+        width: 250px;
+        height: 130px;
+            }
+    
+    .banner_1 {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    padding: 5px;
+    /* margin: 30px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    
+  }
+            
+    .button_1714638912910 {
+        display: inline-block !important;
+        text-decoration: none !important;
+        background-color: #e41515 !important;
+        color: #f9ffff !important;
+        border: 2px solid #007bff !important;
+        border-radius: 3px !important;
+        font-size: 20px !important;
+        padding: 28px 7px !important; 
+        transition: all 0.4s ease !important;
+             }
+        .button_1714638912910:hover{
+        text-decoration: none !important; 
+        background-color: #006089 !important;
+        color: #ffeded !important;
+        border-color: #006089 !important;
+             }
+
+             
+        /* Стили кнопки */
+        .iksweb{
+            display: inline-block;cursor:pointer; 
+            font-size:17px;
+            text-decoration:none;
+            padding:10px 20px; 
+            color:#ffffff;
+            background:#2f84c2;
+            border-radius:6px;
+            border:5px solid #3383bd;
+        }
+        .iksweb:hover{
+            background:#448dc2;
+            color:#ffffff;
+            border:5px solid #448dc2;
+            transition: all 0.2s ease;
+        }
+                                 
+        
+</style>
+
+<div class="container">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <!-- <a href="https://forms.yandex.ru/u/6685325df47e730293f4d5ba/">
+                <img class="banner_1" src="static/images/2024-07-04_10-34-26.png">
+            </a>             -->
+        </div>
+    </div>
+</div> 
+<hr>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="https://nextcloud.corp.tobmed.ru/apps/calendar/p/Mj6AeEAzxXZ5XRJ2/listMonth/now">
+                    <img class="banner_up" src="static/images/am.png">
+                </a>
+                <a class
+                    href="https://nextcloud.corp.tobmed.ru/apps/calendar/">>>добавить мероприятие</a>
+            </div>
+            <div class="col">
+                <a href="https://nextcloud.corp.tobmed.ru/s/TcDBo5AjSxBAnjX">
+                    <img class="banner_up" src="static/images/tmk.png">
+                </a>
+            </div>
+            <div class="col">
+                <a
+                    href="https://mind.72to.ru/#join:tc9d80515-2f54-4b6b-ae24-74e9d788d540">
+                    <img class="banner_up" src="static/images/vks.png">
+                </a>
+            </div>
+            <div class="col">
+                <a
+                    href="http://ubserver.corp.tobmed.ru/calendar">
+                    <img class="banner_up" src="static/images/cal.png">
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div class>
+         <div class>
+            <h1>Новости одной строкой</h1>
+            <br>
+            <p class="lead">
+                <a class
+                    href="https://nextcloud.corp.tobmed.ru/s/Fi2P6HcgMpyWGZc">
+                    ЧТО ТАКОЕ ЛОЯЛЬНОСТЬ ПЕРСОНАЛА?
+
+                </a> 
+
+            </p>
+        <!-- </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead">
+                                Организация наполнения информацией сайта учреждения (tobmed.ru)
+                            <p>
+                            <div id="">
+                            <a class="" href="https://nextcloud.corp.tobmed.ru/s/t8wa2wSNFgawZL6">
+                            Список ответственных
+                            </a>
+                            </div>
+                             <div id="">
+                            <a class="" href="https://nextcloud.corp.tobmed.ru/s/WjnKSrLg8ESkjk3">
+                            Ссылка для загрузки информации
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+        </div>-->
+            <!-- <hr> -->
+            <!-- <div> -->
+                <p class="lead">
+                    <a class href="https://nextcloud.corp.tobmed.ru/s/zgjT8KaPXgtqMxP">
+                        Форма сбора информации о диагностическом оборудовании
+                    </a>
+                </p> 
+                <!-- <p class="lead">
+                    <a class href="/map">
+                        Зоны проведения субботника подразделениями ОБ3
+                    </a>
+                </p> -->
+                <!-- <p class="lead">
+                    <a class="" href="https://nextcloud.corp.tobmed.ru/s/7yPGGF8ESxf4B3L">
+                        Форма сбора информации о расходных материалах к медоборудованию
+                    </a>
+                </p> -->
+                <!-- <p class="lead">
+                    <a class
+                        href="https://nextcloud.corp.tobmed.ru/s/J8cMnfPDLpwppoY">
+                        (1С Медицина) Описание новых релизов (обновлений,
+                        исправлений, доработок) - Релиз 34
+                    </a>
+                </p> -->
+                <!-- <p class="lead">
+                    <a class="" href="https://nextcloud.corp.tobmed.ru/s/jwP9qL9qJCJK8x9">
+                        Форма для сбора информаци по проблемам/доработкам 1С Медицина и др. информационных систем
+                    </a>
+                </p> -->
+
+            <!-- </div>
+        </div> --> 
+        <hr>
+        <div class="row">
+            <div class="col-12 col-md">
+                <h5>Рабочие системы</h5>
+                <ul class="list-unstyled text-small">
+                    {% for x in links_work_system %}
+                    <li><a class="text-muted" height="10"
+                            href="{{x}}">{{links_work_system[x]}}</li>
+                        <hr>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Комнаты ВКС ОБ3</h5>
+                    <div>
+                        <ul class="list-unstyled text-small">
+                            {% for x in vks_rooms %}
+                            <li><a class="text-muted"
+                                    href="{{x}}">{{vks_rooms[x]}}</li>
+                                <hr>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <h5>ВКС Кураторов ответственных специалистов
+                            акушеров-гинекологов по зонам обслуживания</h5>
+                        <div>
+                            <ul class="list-unstyled text-small">
+                                {% for x in vks_rooms_ag %}
+                                <li><a class="text-muted"
+                                        href="{{x}}">{{vks_rooms_ag[x]}}</li>
+                                    <hr>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Телемедицина</h5>
+                            <div>
+                                <ul class="list-unstyled text-small">
+                                    {% for x in tmk_rooms %}
+                                    <li><a class="text-muted"
+                                            href="{{x}}">{{tmk_rooms[x]}}</a></li>
+                                    <hr>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <br>
+                            <h5>Учеба и Вебинары</h5>
+                            <div>
+                                <ul class="list-unstyled text-small">
+                                    {% for x in teaching %}
+                                    <li><a class="text-muted"
+                                            href="{{x}}">{{teaching[x]}}</a></li>
+                                    <hr>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+
+                            <ul class="list-unstyled text-small">
+
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            {# <h5>Кнопки</h5>#}
+                            <ul class="list-unstyled text-small">
+                                <!-- <a
+                                    href="https://forms.yandex.ru/u/6629ebcff47e7389d9d9e70e/"
+                                    class="btn btn-danger btn-block image-button"
+                                    target="_blank">
+                                    Интеллектуальная игра<br>"День Победы"
+                                </a> -->
+
+                                <!--<a class="btn btn-warning btn-lg btn-block" href="https://1c-prod-app18.tls.72to.ru/hospital_ob3">
+                        {#
+                        <button type="button" class="btn btn-warning btn-lg btn-block">#}
+                            1C Медицина
+                            {# <img src="{{ url_for(" static", filename="images/med-to.png") }}" alt="ops image">#}
+                            {#
+                        </button>
+                        #}
+                    </a> --->
+
+                                <a class="btn btn-danger btn-lg btn-block"
+                                    href="/about">
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        !Заявка в ИТ отдел                                        
+                                    </button>                                   
+                                </a>
+                                <a class="btn btn-primary btn-lg btn-block" href="https://chart.miac-tmn.ru/dashboard/list/?pageIndex=0&sortColumn=changed_on_delta_humanized&sortOrder=desc&viewMode=table" target="_blank"  title="Дашборд МИАЦ">
+                                    Dashbord МИАЦ
+                                </a>
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="http://ts2.corp.tobmed.ru/Myrtille/">                                    
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Виртуальный<br>рабочий стол                                        
+                                    </button>                                    
+                                </a><a class="btn btn-primary btn-lg btn-block"
+                                    href="https://sedmed.admtyumen.ru/app/">                                    
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Бюрократ                                       
+                                    </button>                                    
+                                </a>
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="https://rc.med-to.ru">                                    
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Почта     
+                                    </button>
+                                </a>                                
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="https://nextcloud.corp.tobmed.ru/s/RXQSMSepGigdw73">                                    
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        ASSENTIUM
+                                    </button>                                    
+                                </a>
+                                <a class="btn btn-success btn-lg btn-block"
+                                    href="https://diadoc.kontur.ru/">                                    
+                                    <button type="button"
+                                        class="btn btn-success btn-lg btn-block">
+                                        Контур ДИАДОК                                       
+                                    </button>                                    
+                                </a>                              
+                                
+                                <!-- <a class="btn btn-primary btn-lg btn-block"
+                                    href="https://nextcloud.corp.tobmed.ru/s/s4RkwaYwBLBkHNF">
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        СберЗдоровье (Мониторинг АД)
+                                    </button>
+                                </a> -->
+
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="https://login.consultant.ru/">
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        КОНСУЛЬТАНТ+                                        
+                                    </button>
+                                </a> 
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="https://nextcloud.corp.tobmed.ru/s/xbQY4bcwD52swED">                                    
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Портал ТП ТО                                       
+                                    </button>                                    
+                                </a>
+                                <a class="btn btn-danger btn-lg btn-block"
+                                    href="https://minzdrav.gov.ru/ministry/med_covid19/">
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        COVID-19
+                                    </button>
+                                </a>
+                                <a class="btn btn-danger btn-lg btn-block"
+                                    href="https://cr.minzdrav.gov.ru/">
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Рубрикатор КР
+                                    </button>
+                                </a><a class="btn btn-danger btn-lg btn-block"
+                                    href="https://medvestnik.ru/calculators">
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Медицинские калькуляторы
+                                    </button>
+                                </a>
+                                <!--<a class="btn btn-primary btn-lg btn-block" href="https://cloud.72to.ru/">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">
+                            Облако (МИАЦ)
+                        </button>
+                    </a>-->
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="https://nextcloud.corp.tobmed.ru/s/ZtmcYsLStmZ5Dzt">
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Образцы документов
+                                    </button>
+                                </a>
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="https://www.gosuslugi.ru/category/health">
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        ГОСУСЛУГИ <br>
+                                        (Моё здоровье)
+                                    </button>
+                                </a>
+                                <br>
+                                <br>
+                                <h5>Инструкции</h5>
+
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="https://kb.1cmr.ru/pages/viewpage.action?pageId=65591">
+
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Инструкции 1С Медицина
+                                    </button>
+                                </a>
+
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="http://miac-tmn.ru:9220/login/index.php">
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">Дистанционное
+                                        обучение</button>
+
+                                </a>
+
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="https://citto.ru/directions/1/users_support/RRIS_Manual">
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Инструкции РРИС
+                                    </button>
+                                </a>
+
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="https://teletype.in/@ob3it">                                    
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Прочие инструкции                                        
+                                    </button>                                    
+                                </a>
+
+                                <a class="btn btn-primary btn-lg btn-block"
+                                    href="http://miac-tmn.ru:9220/login/index.php">                                    
+                                    <button type="button"
+                                        class="btn btn-primary btn-lg btn-block">
+                                        Обучение сотрудников (МИАЦ)                                        
+                                    </button>                                   
+                                </a>
+
+                            </a>
+
+                            <a class="btn btn-primary btn-lg btn-block"
+                                href="https://fzs.roskazna.ru/">                                
+                                <button type="button"
+                                    class="btn btn-primary btn-lg btn-block">
+                                    Перевыпуск ЭП                                   
+                                </button>                            
+                            </a>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md">
+                    </div>
+                </div>
+                {% endblock %}

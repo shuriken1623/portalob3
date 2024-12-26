@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='/css/node.css') }}"> -->
+	<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+function createExpr(arr) {
+var index = 0;
+var expr = [":containsiAND('" + arr[0] + "')"];
+for (var i = 1; i < arr.length; i++) {
+if (arr[i] === 'AND') {
+expr[index] += ":containsiAND('" + arr[i + 1] + "')";
+i++;
+} else if (arr[i] === 'OR') {
+index++;
+expr[index] = ":containsiOR('" + arr[i + 1] + "')";
+i++;
+}
+}
+return expr;
+}
+$(document).ready(function() {
+
+$(".searchKey").keyup(function() {
+var searchTerm = $(".searchKey").val().replace(/["']/g, "");
+var arr = searchTerm.split(/(AND|OR)/);
+var exprs = createExpr(arr);
+var searchSplit = searchTerm.replace(/AND/g, "'):containsiAND('").replace(/OR/g, "'):containsiOR('");
+
+$.extend($.expr[':'], {
+'containsiAND': function(element, i, match, array) {
+return (element.textContent || element.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+}
+});
+
+$('.results tbody tr').attr('visible', 'false');
+for (var expr in exprs) {
+$(".results tbody tr" + exprs[expr]).each(function(e) {
+$(this).attr('visible', 'true');
+});
+}
+
+var searchCount = $('.results tbody tr[visible="true"]').length;
+
+$('.searchCount').text('найдено ' + searchCount + ' человек');
+if (searchCount == '0') {
+$('.no-result').show();
+} else {
+$('.no-result').hide();
+}
+if ($('.searchKey').val().length == 0) {
+$('.searchCount').hide();
+} else {
+$('.searchCount').show();
+}
+});
+});
+</script>
+<style>
+
+  .logo{
+    width: 244px;
+    height: 65px;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+          }
+
+</style>
+
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body style="background-image: url(static/images/back.png); background-size:contain; background-repeat:no-repeat;">
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <a href="/"><img  class="logo" src="static/images/logo.png">
+  <!-- <h5 class="my-0 mr-md-auto font-weight-normal">ГБУЗ ТО "Областная больница №3 (г. Тобольск)</h5> -->
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="/">Главная</a>
+        <a class="p-2 text-dark" href="/tel">Телефоны</a>
+        <a class="p-2 text-dark" href="https://nextcloud.corp.tobmed.ru/s/3KEKBRXwrDKtJ83">Бродилка</a>
+        <a class="p-2 text-dark" href="https://nextcloud.corp.tobmed.ru/s/QS8ZfHm9fdK2DT2">НОВОМУ СОТРУДНИКУ</a>
+        <a class="btn btn-danger btn-sm" href="/forms">Формы сообщений</a>
+        <a class="p-2 text-dark" href="/magazines">Журналы</a>
+        <a class="p-2 text-dark" href="/cmk">СМК</a>
+        <a class="btn btn-warning btn-sm" href="https://nextcloud.corp.tobmed.ru/s/YdLfq5BiQ5nRntX">Защита ПДн</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://nextcloud.corp.tobmed.ru/login">Войти</a>
+
+</div>
+<div class="container pt-2 my-md-5 pt-md-5">
+    {% block body %}{% endblock %}
+</div>
+
+<footer class="container pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+        <div class="col-12 col-md">
+            <img class="mb-2" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="100" height="24">
+            <small class="d-block mb-3 text-muted">© 2017-2020</small>
+        </div>
+              <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="/service">Service</a></li>
+                  <li><a class="text-muted" href="#">Random feature</a></li>
+                  <li><a class="text-muted" href="#">Team feature</a></li>
+                  <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                  <li><a class="text-muted" href="#">Another one</a></li>
+                  <li><a class="text-muted" href="#">Last time</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">Resource</a></li>
+                  <li><a class="text-muted" href="#">Resource name</a></li>
+                  <li><a class="text-muted" href="#">Another resource</a></li>
+                  <li><a class="text-muted" href="#">Final resource</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">Team</a></li>
+                  <li><a class="text-muted" href="#">Locations</a></li>
+                  <li><a class="text-muted" href="#">Privacy</a></li>
+                  <li><a class="text-muted" href="#">Terms</a></li>
+                </ul>
+              </div>
+
+</footer>
+</body>
+</html>
